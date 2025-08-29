@@ -4,7 +4,7 @@
     align-items: start;
   }
 
-  .chat-message-text{
+  .chat-message-content{
     background-color: rgb(238, 238, 238);
     padding: 15px 20px;
     border-radius: 10px;
@@ -21,4 +21,10 @@
 
   .chat-message-profile{
     width: 45px;
+  }
+
+  .chat-message-time{
+    font-size: 14px;
+    color: rgb(125, 125, 125);
+    margin-top: 5px;
   }
