@@ -5,7 +5,7 @@ import { Chatbot } from 'supersimpledev';
 import './App.css'
 
 function App() {
-  const [chatMessages, setChatMessages] = useState([]);
+  const [chatMessages, setChatMessages] = useState(JSON.parse(localStorage.getItem('messages')) || []);
   //const {ChatMessages, setChatMessages} = array;
 
   //const ChatMessages = array[0];
@@ -16,6 +16,10 @@ function App() {
       'hi':'Hi! How can I help you?'
     });
   }, [])
+
+  useEffect(() => {
+    localStorage.setItem('messages', JSON.stringify(chatMessages));
+  }, [chatMessages]);
 
   return (
     <div className="app-container">
