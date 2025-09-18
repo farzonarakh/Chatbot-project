@@ -6,6 +6,7 @@ import RobotImg from '.././src/assets/robot.png';
 import './App.css'
 
 function App() {
+
   const [chatMessages, setChatMessages] = useState(JSON.parse(localStorage.getItem('messages')) || []);
   //const {ChatMessages, setChatMessages} = array;
 
@@ -22,9 +23,13 @@ function App() {
     localStorage.setItem('messages', JSON.stringify(chatMessages));
   }, [chatMessages]);
 
+  const num = chatMessages.length;
+
+  const title = `${num} Messages`;
+
   return (
     <>
-      <title>Chatbot Project</title>
+      <title>{title}</title>
       <link rel="icon" type="image/svg+xml" href={RobotImg} />
 
       <div className="app-container">
