@@ -2,9 +2,18 @@ import { useRef, useEffect } from "react";
 import { ChatMessage } from './ChatMessage'
 import './ChatMessages.css';
 
-function ChatMessages({chatMessages}) {
-  function useAutoScroll(dependencies) {
-  const containerRef = useRef(null);
+type ChatMessagesProps = {
+  chatMessages: {
+    id: string;
+    message: string;
+    sender: string;
+    time: string;
+  }[];
+};
+
+function ChatMessages({chatMessages}: ChatMessagesProps) {
+  function useAutoScroll(dependencies: object[]) {
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const containerElem = containerRef.current;
