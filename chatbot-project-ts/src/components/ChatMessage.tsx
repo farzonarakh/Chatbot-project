@@ -3,7 +3,13 @@ import RobotProfileImage from '.././assets/robot.png';
 import UserProfileImage from '.././assets/user.png';
 import './ChatMessage.css';
 
-export function ChatMessage({ message, sender, time}) {
+type ChatMessageProps = {
+  message: string;
+  sender: string;
+  time: string;
+};
+
+export function ChatMessage({ message, sender, time } : ChatMessageProps) {
   // const { message, sender } = props;
 
   /*

@@ -1,21 +1,23 @@
 {
-  "name": "chatbot-project",
+  "name": "chatbot-project-ts",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "dayjs": "^1.11.15",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
     "supersimpledev": "^8.6.4"
   },
   "devDependencies": {
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.43.0",
     "@eslint/js": "^9.25.0",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
